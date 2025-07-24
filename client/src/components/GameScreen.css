@@ -1,0 +1,147 @@
+.table-background {
+  height: 100vh;
+  background: radial-gradient(circle at center, #006400 0%, #003300 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 왼쪽 버튼 전체 */
+.left-panel {
+  position: absolute;
+  left: 30px;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* CPU 선택 버튼 */
+.cpu-model-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cpu-model-buttons button {
+  padding: 8px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cpu-model-buttons .selected-model {
+  background-color: #2196f3; /* 파란색 */
+  color: white;
+}
+
+/* 액션 버튼 */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.action-buttons button,
+.action-buttons input {
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+/* 테이블 중앙 */
+.center-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CPU/플레이어 카드 */
+.cpu-area, .player-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* 핸드 */
+.hand {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* 카드 */
+.card {
+  width: 70px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+/* 테이블에 깔린 카드 */
+.table-cards {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* 오른쪽 위 상태창 */
+.right-status {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  text-align: right;
+}
+.center-message {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: gold;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 40px;
+  border-radius: 15px;
+  border: 3px solid white;
+  z-index: 10;
+  text-align: center;
+}
+.winner-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 3px solid #4caf50;
+  border-radius: 10px;
+  padding: 30px 50px;
+  text-align: center;
+  font-size: 22px;
+  color: black;
+  z-index: 999;
+  animation: popUp 0.5s ease-out;
+}
+
+@keyframes popUp {
+  from {
+      transform: translate(-50%, -50%) scale(0.7);
+      opacity: 0;
+  }
+  to {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+  }
+}

@@ -1,0 +1,113 @@
+.dog-container {
+    position: fixed;
+    bottom: 20px;
+    left: -100px;
+    width: 80px;
+    z-index: 100;
+    animation: dogWalk 15s linear infinite;
+    pointer-events: auto;
+  }
+  
+  .dog {
+    width: 80px;
+    height: auto;
+  }
+  
+  .dog.clicked {
+    transform: scale(1.05) translateY(-4px);
+    transition: transform 0.1s;
+  }
+  
+  .bark-bubble {
+    position: absolute;
+    bottom: 80px;
+    left: 100%;
+    margin-left: 10px;
+    background-color: #fff;
+    border: 2px solid #81c784;
+    border-radius: 15px;
+    padding: 8px 12px;
+    color: #388e3c;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: floatUp 2s ease forwards;
+    z-index: 100;
+  }
+  
+  @keyframes floatUp {
+    0% { opacity: 0; transform: translateY(10px); }
+    50% { opacity: 1; transform: translateY(-2px); }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+  
+  .flipped .bark-bubble {
+    display: none;
+  }
+  
+  @keyframes dogWalk {
+    0% { left: -100px; transform: scaleX(1); }
+    49% { transform: scaleX(1); }
+    50% { left: 100%; transform: scaleX(-1); }
+    99% { transform: scaleX(-1); }
+    100% { left: -100px; transform: scaleX(1); }
+  }
+  
+  .dog-container-static {
+    position: absolute;
+    bottom: 20px;
+    left: 1.5rem;
+    z-index: 100;
+  }  
+  
+  .result-header-with-dog {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dog-sit-inline {
+    width: 60px;       
+    height: auto;
+    flex-shrink: 0;       /* 줄어들지 않도록 방지 */
+  }
+  
+  .bark-result-inline {
+    background-color: #ffffff;
+    border: 2px solid #81c784;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: #388e3c;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    white-space: normal;
+  }  
+  
+  
+  
+  @keyframes floatSit {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .bark-result {
+    position: absolute;
+    left: 100%;
+    bottom: 80px;
+    margin-left: 10px;
+    background-color: #fff;
+    border: 2px solid #81c784;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: #388e3c;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    white-space: normal;
+  
+    max-width: 180px;        /* ⬅ 너무 퍼지지 않게 제한! */
+    word-break: keep-all;    /* ⬅ 단어 중간에 끊기지 않게 */
+  }
+  
+  
