@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.board {
+  display: inline-block;
+  border: 2px solid #444;
+  background-color: #999;
+  padding: 4px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: #ccc;
+  cursor: pointer;
+  user-select: none;
+
+  /* 폰트 고정, 라인 고정 */
+  line-height: 1;
+  font-family: monospace;
+
+  /* 텍스트 위치 고정 */
+  vertical-align: middle;
+
+  /* 글자 넘칠 때 튕김 방지 */
+  overflow: hidden;
+}
+
+.cell.open {
+  background-color: #eee;
+}
+
+.cell:hover {
+  background-color: #b0b0b0;
+}
+
+.cell:active {
+  background-color: #a0a0a0;
+}
+
+
+/* 지뢰 아이콘 셀 */
+.cell.is_mine {
+  background-color: #ff6961;
+  color: black;
+  font-weight: bold;
+}
+
+/* 깃발 셀 */
+.cell.flagged {
+  background-color: #c0c0c0;
+  color: red;
+  font-weight: bold;
+}
