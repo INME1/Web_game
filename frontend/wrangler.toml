@@ -1,0 +1,23 @@
+# frontend/wrangler.toml
+# Cloudflare Pages 설정 파일
+
+name = "minesweeper-game"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm run build"
+cwd = "."
+watch_dir = "src"
+
+[build.upload]
+format = "directory"
+dir = "build"
+
+[env.production]
+# 프로덕션 환경 변수
+REACT_APP_API_URL = "https://webgame-api.railway.app"
+NODE_VERSION = "18"
+
+[env.development]
+# 개발 환경 변수
+REACT_APP_API_URL = "http://localhost:8000"

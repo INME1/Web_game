@@ -1,0 +1,14 @@
+# frontend/public/_redirects
+# Cloudflare Pages 리다이렉트 설정
+
+# SPA 라우팅 지원 - 모든 요청을 index.html로 리다이렉트
+/* /index.html 200
+
+# API 요청 프록시 (개발용 - 실제로는 백엔드 URL 직접 호출)
+/api/* https://webgame-api.railway.app/api/:splat 200
+
+# 정적 파일 캐시 최적화
+/static/* /static/:splat 200
+/images/* /images/:splat 200
+/favicon.ico /favicon.ico 200
+/manifest.json /manifest.json 200
