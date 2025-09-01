@@ -1,9 +1,0 @@
-name = "web_game_frontend"
-type = "javascript"
-
-# 빌드 결과물 경로 지정
-[build.environment.production]
-pages_build_output_dir = "frontend/build"
-
-[build.environment.preview]
-pages_build_output_dir = "frontend/build"
