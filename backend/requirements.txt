@@ -2,3 +2,4 @@ Django==5.2.5
 djangorestframework==3.16.1
 gunicorn==21.2.0
 psycopg2-binary==2.9.9  # PostgreSQL 사용 시
+django-cors-headers==4.3.0
