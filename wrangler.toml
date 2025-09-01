@@ -1,0 +1,17 @@
+# wrangler.toml (프로젝트 루트에 위치)
+name = "minesweeper-game"
+compatibility_date = "2025-05-05"
+
+# Pages 설정
+pages_build_output_dir = "frontend/build"
+
+[build]
+command = "cd frontend && npm install && npm run build"
+cwd = "."
+
+[env.production.vars]
+REACT_APP_API_URL = "https://webgame-api.railway.app"
+NODE_VERSION = "18"
+
+[env.development.vars]
+REACT_APP_API_URL = "http://localhost:8000"
